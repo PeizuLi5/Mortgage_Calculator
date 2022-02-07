@@ -1,10 +1,14 @@
 # *Mortgage Calculator*
 
-**Mortage Calculator** is a calculator application for android.
+**Mortage Calculator** is a java based calculator application for android that the user can uninstall the apps after using it.
 
 Author: **Peizu Li**
 
-##Video Walkthrough
+## Video Walkthrough
+
+![](https://i.imgur.com/HwUdEvI.gif)
+
+GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 
 ## License
