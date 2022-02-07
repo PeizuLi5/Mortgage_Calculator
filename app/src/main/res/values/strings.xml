@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Mortgage Calculator by Peizu Li</string>
+    <string name="question">Enter Principle ($):</string>
+    <string name="interest">Interest rate:</string>
+    <string name="defaultRate">10.0%</string>
+    <string name="term">Select Loan Term</string>
+    <string name="tax">Include taxes and insurance (0.1%)</string>
+    <string name="calc">Calculate</string>
+    <string name="unins">Uninstall</string>
+    <string name="task">Press CALCULATE for monthly payment</string>
+    <string name="fifteen">15 years</string>
+    <string name="twenty">20 years</string>
+    <string name="thirty">30 years</string>
+</resources>
