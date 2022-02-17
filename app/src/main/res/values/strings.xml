@@ -11,4 +11,7 @@
     <string name="fifteen">15 years</string>
     <string name="twenty">20 years</string>
     <string name="thirty">30 years</string>
+    <string name="noInput">Please enter the Principle.\nThen Press CALCULATE for monthly payments.</string>
+    <string name="wrongInput">Please enter a valid number. 2 decimal digits max.\nThen Press CALCULATE for monthly payments.</string>
+
 </resources>

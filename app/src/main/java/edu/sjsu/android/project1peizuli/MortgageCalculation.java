@@ -9,7 +9,7 @@ import java.math.RoundingMode;
  */
 public class MortgageCalculation {
     /**
-     * Calculation method will be performed.
+     * Calculation method will be performed, and the result will round into 2 decimal places.
      * @param price principle (amount that a user borrow)
      * @param interest interest rate per month
      * @param year number of years of the loan
@@ -23,13 +23,17 @@ public class MortgageCalculation {
             //with tax
             if(tax){
                 result = ((price/(year*12) + (0.001*price)));
-                BigDecimal bigDecimal = new BigDecimal(result).setScale(2, RoundingMode.HALF_UP);
+                //rounding
+                BigDecimal bigDecimal = new BigDecimal(result).
+                        setScale(2, RoundingMode.HALF_UP);
                 return bigDecimal.doubleValue();
             }
             //without tax
             else{
                 result = (price/(year*12));
-                BigDecimal bigDecimal = new BigDecimal(result).setScale(2, RoundingMode.HALF_UP);
+                //rounding
+                BigDecimal bigDecimal = new BigDecimal(result).
+                        setScale(2, RoundingMode.HALF_UP);
                 return bigDecimal.doubleValue();
             }
         }
@@ -38,13 +42,17 @@ public class MortgageCalculation {
             //with tax
             if (tax){
                 result = ((price*interest/12)/(1-Math.pow(1+interest/12,-year*12)))+(0.001*price);
-                BigDecimal bigDecimal = new BigDecimal(result).setScale(2, RoundingMode.HALF_UP);
+                //rounding
+                BigDecimal bigDecimal = new BigDecimal(result).
+                        setScale(2, RoundingMode.HALF_UP);
                 return bigDecimal.doubleValue();
             }
             //without tax
             else{
                 result = ((price*interest/12)/(1-Math.pow(1+interest/12,-year*12)));
-                BigDecimal bigDecimal = new BigDecimal(result).setScale(2, RoundingMode.HALF_UP);
+                //rounding
+                BigDecimal bigDecimal = new BigDecimal(result).
+                        setScale(2, RoundingMode.HALF_UP);
                 return bigDecimal.doubleValue();
             }
         }

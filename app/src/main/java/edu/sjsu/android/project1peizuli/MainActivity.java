@@ -13,6 +13,7 @@ import java.math.BigDecimal;
 
 import edu.sjsu.android.project1peizuli.databinding.ActivityMainBinding;
 
+
 public class MainActivity extends AppCompatActivity {
 
     private ActivityMainBinding binding;
@@ -31,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
                 double p = progress / 10.0;
                 String text = "" + p + "%";
                 binding.textView7.setText(text);
+                binding.textView6.setText(R.string.task);
             }
 
             @Override
@@ -48,12 +50,13 @@ public class MainActivity extends AppCompatActivity {
 
     public void onClick(View view){
         if(binding.textView.getText().length() == 0){
-            binding.textView6.setText("Please enter the Principle. \nThen Press CALCULATE for monthly payments.");
+            binding.textView6.setText(R.string.noInput);
             Toast.makeText(this, "Invalid Input", Toast.LENGTH_LONG).show();
             return;
         }
-        else if(BigDecimal.valueOf(Double.parseDouble(binding.textView.getText().toString())).scale()>2){
-            binding.textView6.setText("Please enter a valid number. 2 decimal digits max. \nThen Press CALCULATE for monthly payments.");
+        else if(BigDecimal.valueOf(Double.parseDouble(
+                binding.textView.getText().toString())).scale()>2){
+            binding.textView6.setText(R.string.wrongInput);
             Toast.makeText(this, "Invalid Input",Toast.LENGTH_LONG).show();
             return;
         }
